@@ -10,6 +10,8 @@
     tools:layout_editor_absoluteX="0dp">
 
     <Button
+        android:width = "150dp"
+        android:height = "100dp"
         android:id="@+id/Start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -21,9 +23,11 @@
         tools:layout_constraintTop_creator="1"
         tools:layout_constraintLeft_creator="1"
         app:layout_constraintTop_toBottomOf="@+id/chronometer"
-        app:layout_constraintLeft_toLeftOf="@+id/Stop" />
+        app:layout_constraintLeft_toLeftOf="@+id/Stop"/>
 
     <Button
+        android:width = "150dp"
+        android:height = "100dp"
         android:id="@+id/Stop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -40,6 +44,8 @@
         app:layout_constraintLeft_toLeftOf="parent" />
 
     <Button
+        android:width = "150dp"
+        android:height = "100dp"
         android:id="@+id/Reset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
