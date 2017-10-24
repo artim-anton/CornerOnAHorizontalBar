@@ -1,49 +1,25 @@
 package com.example.admin.corneronahorizontalbar;
 
-import android.os.SystemClock;
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Chronometer;
-import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
-
-    private Chronometer mChronometer;
+public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.splash);
 
-        mChronometer = (Chronometer) findViewById(R.id.chronometer);
-
-        mChronometer.setOnChronometerTickListener(new Chronometer.OnChronometerTickListener() {
+        new Handler().postDelayed(new Runnable() {
             @Override
-            public void onChronometerTick(Chronometer chronometer) {
-                long elapsedMillis = SystemClock.elapsedRealtime()
-                        - mChronometer.getBase();
-
-                if (elapsedMillis > 5000) {
-                    String strElapsedMillis = "Прошло больше 5 секунд";
-                    Toast.makeText(getApplicationContext(),
-                            strElapsedMillis, Toast.LENGTH_SHORT)
-                            .show();
-                }
+            public void run() {
+                Intent i = new Intent(MainActivity.this, HomeActivity.class);
+                startActivity(i);
+                finish();
             }
-        });
-    }
-
-   public void onStartClick(View view) {
-        mChronometer.setBase(SystemClock.elapsedRealtime());
-        mChronometer.start();
-    }
-
-    public void onStopClick(View view) {
-        mChronometer.stop();
-    }
-
-    public void onResetClick(View view) {
-        mChronometer.setBase(SystemClock.elapsedRealtime());
+        }, 5*1000);
     }
 }
