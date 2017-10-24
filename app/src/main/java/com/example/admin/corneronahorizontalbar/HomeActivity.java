@@ -24,12 +24,12 @@ public class HomeActivity extends AppCompatActivity {
                 long elapsedMillis = SystemClock.elapsedRealtime()
                         - mChronometer.getBase();
 
-                if (elapsedMillis > 5000) {
+                /*if (elapsedMillis > 5000) {
                     String strElapsedMillis = "Прошло больше 5 секунд";
                     Toast.makeText(getApplicationContext(),
                             strElapsedMillis, Toast.LENGTH_SHORT)
                             .show();
-                }
+                }*/
             }
         });
     }

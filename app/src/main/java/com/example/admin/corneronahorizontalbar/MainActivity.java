@@ -20,6 +20,6 @@ public class MainActivity extends Activity {
                 startActivity(i);
                 finish();
             }
-        }, 5*1000);
+        }, 3*1000);
     }
 }
