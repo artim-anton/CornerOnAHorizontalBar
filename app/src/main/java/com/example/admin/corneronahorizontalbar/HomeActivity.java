@@ -1,5 +1,6 @@
 package com.example.admin.corneronahorizontalbar;
 
+import android.media.SoundPool;
 import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,6 +11,8 @@ import android.widget.Toast;
 public class HomeActivity extends AppCompatActivity {
 
     private Chronometer mChronometer;
+    private int sound;
+    private SoundPool soundPool;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
