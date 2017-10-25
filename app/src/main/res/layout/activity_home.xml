@@ -10,21 +10,23 @@
     tools:layout_editor_absoluteX="0dp">
 
     <Button
-        android:width = "150dp"
-        android:height = "100dp"
         android:id="@+id/Start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/start"
-        android:onClick="onStartClick"
+        android:layout_marginEnd="8dp"
         android:layout_marginTop="8dp"
+        android:width="150dp"
+        android:height="100dp"
         android:background="@drawable/oval_button_green"
+        android:onClick="onStartClick"
+        android:text="@string/start"
         android:textColor="#FAFAFA"
         android:textSize="25sp"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintEnd_toEndOf="@+id/Stop"
+        app:layout_constraintLeft_toLeftOf="@+id/Stop"
         app:layout_constraintTop_toBottomOf="@+id/chronometer"
-        app:layout_constraintLeft_toLeftOf="@+id/Stop"/>
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintTop_creator="1" />
 
     <Button
         android:width = "150dp"
@@ -68,13 +70,15 @@
         android:id="@+id/chronometer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:text="Large Text"
         android:textColor="#FFFFFF"
         android:textSize="100sp"
+        app:layout_constraintEnd_toEndOf="@+id/Start"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_editor_absoluteX="8dp" />
+        app:layout_constraintStart_toStartOf="@+id/Start"
+        tools:layout_constraintTop_creator="1" />
 
 </android.support.constraint.ConstraintLayout>
