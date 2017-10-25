@@ -1,84 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-
     tools:layout_editor_absoluteY="81dp"
-    tools:layout_editor_absoluteX="0dp">
+    tools:layout_editor_absoluteX="0dp"
+    android:orientation="vertical">
+
+    <Chronometer
+        android:id="@+id/chronometer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:text="Large Text"
+        android:textColor="#FFFFFF"
+        android:textSize="100sp"
+        android:gravity="center_vertical|center_horizontal"/>
 
     <Button
         android:id="@+id/Start"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginTop="8dp"
-        android:width="150dp"
-        android:height="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:background="@drawable/oval_button_green"
         android:onClick="onStartClick"
         android:text="@string/start"
         android:textColor="#FAFAFA"
-        android:textSize="25sp"
-        app:layout_constraintEnd_toEndOf="@+id/Stop"
-        app:layout_constraintLeft_toLeftOf="@+id/Stop"
-        app:layout_constraintTop_toBottomOf="@+id/chronometer"
-        tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintTop_creator="1"
-        android:layout_marginRight="8dp" />
+        android:textSize="25sp"/>
 
     <Button
-        android:width = "150dp"
-        android:height = "100dp"
         android:id="@+id/Stop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:text="@string/stop"
         android:onClick="onStopClick"
-        android:layout_marginTop="8dp"
         android:background="@drawable/oval_button_red"
         android:textColor="#FAFAFA"
-        android:textSize="25sp"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Start"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        android:textSize="25sp"/>
 
     <Button
-        android:width = "150dp"
-        android:height = "100dp"
         android:id="@+id/Reset"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:text="@string/reset"
         android:onClick="onResetClick"
-        android:layout_marginTop="8dp"
         android:background="@drawable/oval_button_blue"
         android:textColor="#FAFAFA"
-        android:textSize="25sp"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintRight_toRightOf="@+id/Stop"
-        app:layout_constraintTop_toBottomOf="@+id/Stop"
-        app:layout_constraintLeft_toLeftOf="@+id/Stop" />
+        android:textSize="25sp"/>
 
-    <Chronometer
-        android:id="@+id/chronometer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Large Text"
-        android:textColor="#FFFFFF"
-        android:textSize="100sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_constraintTop_creator="1" />
-
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>
