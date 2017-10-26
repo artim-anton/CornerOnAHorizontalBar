@@ -4,5 +4,6 @@
     <string name="stop">Stop</string>
     <string name="reset">Reset</string>
     <string name="base">Base</string>
+    <string name="clear">Clear</string>
 
 </resources>

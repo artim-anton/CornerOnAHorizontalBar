@@ -1,15 +1,17 @@
 package com.example.admin.corneronahorizontalbar;
 
 import android.app.Activity;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
 public class ListWorkout extends Activity {
+
 
     TextView textView;
 
@@ -17,6 +19,7 @@ public class ListWorkout extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_workout);
+
 
        /* List<Contact> allContacts = Contact.listAll(Contact.class);
 
@@ -33,5 +36,12 @@ public class ListWorkout extends Activity {
 
         // присваиваем адаптер списку
         lvMain.setAdapter(adapter);
+    }
+
+    public void onClearClick(View view) {
+        Contact.deleteAll(Contact.class);
+        Toast toast = Toast.makeText(getApplicationContext(),
+                "Базу очищено!", Toast.LENGTH_SHORT);
+        toast.show();
     }
 }

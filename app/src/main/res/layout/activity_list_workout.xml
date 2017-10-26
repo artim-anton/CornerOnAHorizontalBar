@@ -5,13 +5,19 @@
     android:layout_height="fill_parent"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"></TextView>
+    <Button
+        android:id="@+id/Clear"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/oval_button_red"
+        android:onClick="onClearClick"
+        android:text="clear"
+        android:textColor="#FAFAFA"
+        android:textSize="25sp" />
     <ListView
         android:id="@+id/lvMain"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    </ListView>
+        android:layout_height="0dp"
+        android:layout_weight="10"/>
 </LinearLayout>
