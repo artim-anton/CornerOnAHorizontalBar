@@ -86,10 +86,10 @@ public class HomeActivity extends AppCompatActivity implements SoundPool.OnLoadC
 
     }
 
-    public void onResetClick(View view) {
+   /* public void onResetClick(View view) {
         soundPool.play(sound, 1, 1, 0, 0, 1);
         mChronometer.setBase(SystemClock.elapsedRealtime());
-    }
+    }*/
 
     public void onBaseClick(View view) {
         Intent intent = new Intent(this, ListWorkout.class);

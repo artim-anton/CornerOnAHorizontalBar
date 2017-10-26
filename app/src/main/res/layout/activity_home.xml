@@ -18,12 +18,16 @@
         android:textColor="#FFFFFF"
         android:textSize="100sp"
         android:gravity="center_vertical|center_horizontal"/>
-
-    <Button
-        android:id="@+id/Start"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:orientation="horizontal">
+    <Button
+        android:id="@+id/Start"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
         android:background="@drawable/oval_button_green"
         android:onClick="onStartClick"
         android:text="@string/start"
@@ -32,25 +36,15 @@
 
     <Button
         android:id="@+id/Stop"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_width="0dp"
         android:layout_weight="1"
+        android:layout_height="match_parent"
         android:text="@string/stop"
         android:onClick="onStopClick"
         android:background="@drawable/oval_button_red"
         android:textColor="#FAFAFA"
         android:textSize="25sp"/>
-
-    <Button
-        android:id="@+id/Reset"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:text="@string/reset"
-        android:onClick="onResetClick"
-        android:background="@drawable/oval_button_blue"
-        android:textColor="#FAFAFA"
-        android:textSize="25sp"/>
+    </LinearLayout>
 
     <Button
         android:id="@+id/Base"
