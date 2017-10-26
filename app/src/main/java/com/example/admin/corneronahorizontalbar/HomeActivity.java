@@ -1,6 +1,7 @@
 package com.example.admin.corneronahorizontalbar;
 
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.media.AudioAttributes;
 import android.media.AudioManager;
 import android.media.SoundPool;
@@ -8,9 +9,16 @@ import android.os.Build;
 import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.format.Time;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Chronometer;
+import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.Date;
+import java.util.List;
 
 public class HomeActivity extends AppCompatActivity implements SoundPool.OnLoadCompleteListener {
 
@@ -31,6 +39,12 @@ public class HomeActivity extends AppCompatActivity implements SoundPool.OnLoadC
 
         soundPool.setOnLoadCompleteListener(this);
         sound = soundPool.load(this, R.raw.click, 1);
+
+        /*Date date = new Date();
+        textView = (TextView) findViewById(R.id.textView);
+        textView.setText(date.toString());*/
+
+
 
         mChronometer = (Chronometer) findViewById(R.id.chronometer);
 
@@ -59,11 +73,27 @@ public class HomeActivity extends AppCompatActivity implements SoundPool.OnLoadC
     public void onStopClick(View view) {
         soundPool.play(sound, 1, 1, 0, 0, 1);
         mChronometer.stop();
+        /*Time time = new Time(Time.getCurrentTimezone());
+        time.setToNow();
+        String sTime = time.toString();*/
+        String sChronometer = mChronometer.getText().toString();
+        Contact contact = new Contact(sChronometer);
+        contact.save();
+
+
+
+
+
     }
 
     public void onResetClick(View view) {
         soundPool.play(sound, 1, 1, 0, 0, 1);
         mChronometer.setBase(SystemClock.elapsedRealtime());
+    }
+
+    public void onBaseClick(View view) {
+        Intent intent = new Intent(this, ListWorkout.class);
+        startActivity(intent);
     }
 
 
