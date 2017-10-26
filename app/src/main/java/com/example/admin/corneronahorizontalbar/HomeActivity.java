@@ -74,8 +74,8 @@ public class HomeActivity extends AppCompatActivity implements SoundPool.OnLoadC
         soundPool.play(sound, 1, 1, 0, 0, 1);
         mChronometer.stop();
         /*Time time = new Time(Time.getCurrentTimezone());
-        time.setToNow();
-        String sTime = time.toString();*/
+        time.setToNow();*/
+       // String sTime = time.toString();
         String sChronometer = mChronometer.getText().toString();
         Contact contact = new Contact(sChronometer);
         contact.save();

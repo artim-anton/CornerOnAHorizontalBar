@@ -6,7 +6,7 @@ import com.orm.SugarRecord;
 
 public class Contact extends SugarRecord{
 
-   // String sTime;
+    //String sTime;
     String sChronometer;
 
     //обязательно создайте пустой конструктор
@@ -14,7 +14,7 @@ public class Contact extends SugarRecord{
     }
 
     public Contact(String sChronometer) {
-      //  this.sTime = sTime;
+        //this.sTime = sTime;
         this.sChronometer = sChronometer;
     }
 
