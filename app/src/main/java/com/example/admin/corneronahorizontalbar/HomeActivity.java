@@ -25,6 +25,7 @@ public class HomeActivity extends AppCompatActivity implements SoundPool.OnLoadC
     private Chronometer mChronometer;
     private int sound;
     private SoundPool soundPool;
+    TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,25 +74,21 @@ public class HomeActivity extends AppCompatActivity implements SoundPool.OnLoadC
     public void onStopClick(View view) {
         soundPool.play(sound, 1, 1, 0, 0, 1);
         mChronometer.stop();
-        /*Time time = new Time(Time.getCurrentTimezone());
-        time.setToNow();*/
-       // String sTime = time.toString();
+        Time time = new Time(Time.getCurrentTimezone());
+        time.setToNow();
+        int month = time.month + 1;
+        String sTime = time.monthDay + "." + month + "." + time.year;
+        /*textView = (TextView) findViewById(R.id.textView);
+        textView.setText(sTime);*/
+
         String sChronometer = mChronometer.getText().toString();
-        Contact contact = new Contact(sChronometer);
+        Contact contact = new Contact(sTime, sChronometer);
         contact.save();
-
-
-
-
-
     }
 
-   /* public void onResetClick(View view) {
-        soundPool.play(sound, 1, 1, 0, 0, 1);
-        mChronometer.setBase(SystemClock.elapsedRealtime());
-    }*/
 
     public void onBaseClick(View view) {
+        soundPool.play(sound, 1, 1, 0, 0, 1);
         Intent intent = new Intent(this, ListWorkout.class);
         startActivity(intent);
     }

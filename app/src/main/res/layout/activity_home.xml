@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     android:background="@drawable/background"
-    tools:layout_editor_absoluteY="81dp"
-    tools:layout_editor_absoluteX="0dp"
     android:orientation="vertical">
 
     <Chronometer
@@ -18,43 +15,43 @@
         android:textColor="#FFFFFF"
         android:textSize="100sp"
         android:gravity="center_vertical|center_horizontal"/>
+
+    <Button
+        android:id="@+id/base"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/button_black"
+        android:onClick="onBaseClick"
+        android:text="@string/base"
+        android:textColor="#FAFAFA"
+        android:textSize="24sp" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="horizontal">
     <Button
-        android:id="@+id/Start"
+        android:id="@+id/start"
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="match_parent"
-        android:background="@drawable/oval_button_green"
+        android:background="@drawable/button_green"
         android:onClick="onStartClick"
         android:text="@string/start"
         android:textColor="#FAFAFA"
-        android:textSize="25sp"/>
+        android:textSize="24sp"/>
 
     <Button
-        android:id="@+id/Stop"
+        android:id="@+id/stop"
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="match_parent"
         android:text="@string/stop"
         android:onClick="onStopClick"
-        android:background="@drawable/oval_button_red"
+        android:background="@drawable/button_red"
         android:textColor="#FAFAFA"
-        android:textSize="25sp"/>
+        android:textSize="24sp"/>
     </LinearLayout>
-
-    <Button
-        android:id="@+id/Base"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="@drawable/oval_button_black"
-        android:onClick="onBaseClick"
-        android:text="base"
-        android:textColor="#FAFAFA"
-        android:textSize="25sp" />
 
 </LinearLayout>

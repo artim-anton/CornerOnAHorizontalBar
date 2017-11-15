@@ -10,9 +10,9 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@drawable/oval_button_red"
+        android:background="@drawable/button_red"
         android:onClick="onClearClick"
-        android:text="clear"
+        android:text="@string/clear"
         android:textColor="#FAFAFA"
         android:textSize="25sp" />
     <ListView

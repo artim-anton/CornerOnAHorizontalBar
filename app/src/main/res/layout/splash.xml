@@ -6,6 +6,7 @@
 
     <ImageView
         android:src="@drawable/logo"
+        android:contentDescription="@string/splash"
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

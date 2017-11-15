@@ -16,10 +16,10 @@ public class MainActivity extends Activity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent i = new Intent(MainActivity.this, HomeActivity.class);
+                Intent i = new Intent(MainActivity.this, HintActivity.class);
                 startActivity(i);
                 finish();
             }
-        }, 3*1000);
+        }, 1*1000);
     }
 }

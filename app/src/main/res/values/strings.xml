@@ -1,9 +1,16 @@
 <resources>
-    <string name="app_name">CornerOnAHorizontalBar</string>
-    <string name="start">Start</string>
-    <string name="stop">Stop</string>
-    <string name="reset">Reset</string>
-    <string name="base">Base</string>
-    <string name="clear">Clear</string>
+    <string name="app_name">Уголок на турнике</string>
+    <string name="start">Старт</string>
+    <string name="stop">Стоп</string>
+    <string name="base">Список</string>
+    <string name="clear">Очистить</string>
+    <string name="splash">Splash</string>
+    <string name="ok">Начать</string>
+
+    <string name="about_coner">
+        <b>Уголок на турнике</b> — это упражнение,
+        которое хорошо укрепляет прямую мышцу живота,
+        его лучше всего выполнять в конце тренировки пресса
+        для окончательного утомления мышц живота.</string>
 
 </resources>
